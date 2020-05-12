@@ -164,7 +164,7 @@ body {
 .content {
   width: 600px;
   height: 400px;
-  background: rgba(16, 16, 16, 0.99);
+  background: #141414;
   position: relative;
   top: 0;
   left: 0;
@@ -204,12 +204,12 @@ body {
 /* MAIN */
 
 .content > .main {
-  background: #170f11;
+  background: #141414;
   width: 200px;
   height: 400px;
   display: grid;
   grid-template-rows: repeat(6, 1fr);
-  outline: 1px solid rgba(255, 255, 255, 0.1);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
   position: absolute;
   left: -200px;
   transition: all ease-in-out 0.25s 0s;
@@ -249,4 +249,42 @@ body {
 .content.active > .main {
   transition: all ease-in-out 0.5s 0.5s;
   left: 0;
+}
+
+/* DESCRIPTIONS */
+
+.content > .descriptions {
+  width: 265px;
+  height: 340px;
+  position: absolute;
+  left: 200px;
+  bottom: -370px;
+  padding: 0px 20px;
+  overflow: auto;
+  transition: all ease-in-out 0.5s 0s;
+  color: #FFFFFF;
+  text-align: justify;
+  font-size: 12px;
+  font-family: 'Open Sans', sans-serif;
+  margin: 20px;
+  border-top: 10px solid #141414;
+  border-bottom: 10px solid #141414;
+}
+
+.content > .descriptions::-webkit-scrollbar {
+  width: 5px;
+}
+
+.content > .descriptions::-webkit-scrollbar-thumb {
+  background: #252222;
+}
+
+.content > .descriptions::-webkit-scrollbar-track {
+  background: #141414;
+}
+
+.content.active > .descriptions {
+  transition: all ease-in-out 0.5s 0.5s;
+  left: 200px;
+  bottom: 0;
 }
