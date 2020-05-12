@@ -217,15 +217,26 @@ body {
 
 .content > .main > .field {
   box-sizing: border-box;
-  padding: 10px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: grid;
+  grid-template-columns: 66.66px auto;
 }
 
 .content > .main > .field:last-child {
   border-bottom: none;
 }
 
-.content > .main > .field > .title {
+.content > .main > .field > .icon {
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  font-size: 15px;
+}
+
+.content > .main > .field > span > .title {
+  margin: 10px 0 0px 10px;
   font-family: 'Playfair Display', serif;
   font-weight: 900;
   font-size: 25px;
@@ -234,11 +245,12 @@ body {
   letter-spacing: -3px;
 }
 
-.content > .main > .field > .title::first-letter {
+.content > .main > .field > span > .title::first-letter {
   color: #f0a500;
 }
 
-.content > .main > .field > .value {
+.content > .main > .field > span > .value {
+  margin: 0px 0 0px 10px;
   font-family: 'Open Sans', sans-serif;
   text-transform: uppercase;
   font-size: 10px;
