@@ -193,6 +193,7 @@ body {
   opacity: 0;
   visibility: hidden;
   background: rgba(255, 255, 255, 0.01);
+  z-index: 150;
 }
 
 .content.active > .icon {
@@ -301,6 +302,7 @@ body {
   bottom: 0;
 }
 
+.content.active > .quote > i,
 .content.active > .descriptions > strong,
 .content.active > .descriptions > i {
   color: #f0a500;
@@ -319,4 +321,24 @@ body {
   height: 1px;
   background: rgba(255, 255, 255, 0.1);
   margin: 20px 0;
+}
+
+/* QUOTE */
+
+.content.active > .quote {
+  width: 400px;
+  height: 50px;
+  line-height: 50px;
+  transform: rotate(-90deg);
+  position: absolute;
+  left: 365px;
+  top: 190px;
+  text-align: center;
+  color: #ffffff;
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  font-size: 22px;
+  font-style: italic;
+  letter-spacing: -2px;
+  z-index: 50;
 }
