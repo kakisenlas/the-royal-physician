@@ -119,6 +119,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all ease-in-out 0.5s;
 }
 
 /* IMAGE BUTTON */
@@ -147,9 +148,15 @@ body {
 
 /* IMG-CONTAINER TRANSITIONS */
 
+.front > .img-container:hover > .img {
+  box-shadow: none;
+  filter: grayscale(100%);
+}
+
 .front > .img-container:hover .icon {
   width: 215px;
   height: 215px;
+  opacity: 0;
 }
 
 /* CONTENT */
