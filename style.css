@@ -325,14 +325,14 @@ body {
 
 /* QUOTE */
 
-.content.active > .quote {
+.content > .quote {
   width: 400px;
   height: 50px;
   line-height: 50px;
   transform: rotate(-90deg);
   position: absolute;
   left: 365px;
-  top: 190px;
+  top: -580px;
   text-align: center;
   color: #ffffff;
   font-family: 'Playfair Display', serif;
@@ -341,4 +341,10 @@ body {
   font-style: italic;
   letter-spacing: -2px;
   z-index: 50;
+  transition: all ease-in-out 0.5s 0.25s;
+}
+
+.content.active > .quote {
+  transition: all ease-in-out 0.75s 0.75s;
+  top: 190px;
 }
