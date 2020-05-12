@@ -1,7 +1,6 @@
 /*
 
-ind: #8a3480;
-pink: #957186;
+gold: #f0a500; rgba(240, 165, 0, 0.75);
 charcoal: #36494e;
 xiketic: #170f11;
 
@@ -44,7 +43,7 @@ body {
   position: relative;
   overflow: hidden;
   cursor: crosshair;
-  outline: 1px solid rgba(255, 255, 255, 0.05);
+  outline: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* FRONT */
@@ -72,7 +71,7 @@ body {
 }
 
 .front > .name::first-letter {
-  color: #8a3480;
+  color: #f0a500;
 }
 
 /* PROFESSION */
@@ -88,7 +87,7 @@ body {
 }
 
 .front > .profession > i {
-  color: #8a3480;
+  color: #f0a500;
 }
 
 /* IMAGE */
@@ -111,7 +110,7 @@ body {
   background-size: cover;
   background-position: center;
   filter: grayscale(50%);
-  box-shadow: inset 0 0 0 395px rgba(138, 52, 128, 0.75);
+  box-shadow: inset 0 0 0 395px rgba(240, 165, 0, 0.75);
   transform: rotate(-45deg);
   position: absolute;
   z-index: 100;
@@ -137,7 +136,7 @@ body {
   font-size: 25px;
   background: rgba(255, 255, 255, 0.15);
   transform: rotate(45deg);
-  transition: all ease-in-out 0.45s;
+  transition: all ease-in-out 0.5s;
   cursor: pointer;
 }
 
@@ -162,10 +161,11 @@ body {
   position: relative;
   top: 0;
   left: 0;
-  transition: all ease-in-out 0.45s;
+  transition: all ease-in-out 1s;
 }
 
 .content.active {
+  transition: all ease-in-out 0.5s;
   top: -400px;
 }
 
@@ -185,12 +185,61 @@ body {
   cursor: pointer;
   opacity: 0;
   visibility: hidden;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.01);
 }
 
 .content.active > .icon {
   opacity: 1;
   visibility: visible;
   transition: all ease-in-out 0.25s 0.5s;
+}
+
+/* MAIN */
+
+.content > .main {
+  background: #170f11;
+  width: 200px;
+  height: 400px;
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  outline: 1px solid rgba(255, 255, 255, 0.1);
+  position: absolute;
+  left: -200px;
+  transition: all ease-in-out 0.25s 0s;
+}
+
+.content > .main > .field {
+  box-sizing: border-box;
+  padding: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.content > .main > .field:last-child {
+  border-bottom: none;
+}
+
+.content > .main > .field > .title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  font-size: 25px;
+  font-style: italic;
+  color: #ffffff;
+  letter-spacing: -3px;
+}
+
+.content > .main > .field > .title::first-letter {
+  color: #f0a500;
+}
+
+.content > .main > .field > .value {
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+
+.content.active > .main {
+  transition: all ease-in-out 0.5s 0.5s;
+  left: 0;
 }
